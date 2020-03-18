@@ -11,14 +11,14 @@ public class Player_move : MonoBehaviour
     //public GameObject panel;
     public float speed;
     //public GameObject stage2;
-    public Text goulTexst;
+    public GameObject goulTexst;
 
     // Use this for initialization
     void Start()
     {
          pos = transform. position;
-        goulTexst = GetComponent<Text>();
-
+        
+        
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class Player_move : MonoBehaviour
 
         if(other.gameObject.tag=="goul")
         {
-
+            goulTexst.GetComponent<Text>().enabled = true;
         }
 
     }
